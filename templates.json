@@ -9,6 +9,22 @@
       "platform": "linux",
       "image": "testcab/cors-anywhere:latest",
       "ports": ["8080/tcp"]
+    },
+    {
+      "type": 1,
+      "title": "uptime-kuma",
+      "name": "uptime-kuma",
+      "description": "A self-hosted (uptime) monitoring tool.",
+      "categories": ["monitoring"],
+      "platform": "linux",
+      "image": "louislam/uptime-kuma:1",
+      "ports": ["3031:3031/tcp"],
+      "volumes": [
+        {
+          "container": "/app/data"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
