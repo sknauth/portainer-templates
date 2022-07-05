@@ -1,0 +1,14 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "CORS-anywhere",
+      "description": "A NodeJS proxy which adds CORS headers to the proxied request.",
+      "categories": ["development"],
+      "platform": "linux",
+      "image": "testcab/cors-anywhere:latest",
+      "ports": ["8080/tcp"]
+    }
+  ]
+}
