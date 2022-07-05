@@ -18,7 +18,7 @@
       "categories": ["monitoring"],
       "platform": "linux",
       "image": "louislam/uptime-kuma:1",
-      "ports": ["3031:3031/tcp"],
+      "ports": ["3001/tcp"],
       "volumes": [
         {
           "container": "/app/data"
