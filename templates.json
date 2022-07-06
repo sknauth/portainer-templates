@@ -25,6 +25,37 @@
         }
       ],
       "restart_policy": "unless-stopped"
+    },
+    {
+      "type": 1,
+      "title": "Homer",
+      "name": "homer",
+      "description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
+      "categories": ["web"],
+      "platform": "linux",
+      "image": "b4bz/homer:latest",
+      "ports": ["8080/tcp"],
+      "volumes": [
+        {
+          "container": "/www/assets"
+        }
+      ],
+      "env": [
+        {
+          "name": "INIT_ASSETS",
+          "label": "Init assets",
+          "description": "Install example configuration file and assets.",
+	  "default": "1"
+        },
+        {
+          "name": "SUBFOLDER",
+          "label": "subfolder",
+          "description": "To host Homer in a subfolder e.g. http://my-domain/homer, set this to /homer.",
+	  "default": ""
+        }
+      ],
+      "restart_policy": "unless-stopped",
+      "note": "To configure Homer edit /www/assets/config.yml inside corresponding volume."
     }
   ]
 }
